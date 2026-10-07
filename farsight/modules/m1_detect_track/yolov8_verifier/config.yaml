@@ -1,0 +1,6 @@
+checkpoint: crowdhuman_yolov8n_best.pt  # manifest file; yolov8x.pt = COCO model of the plan
+imgsz: 640          # CrowdHuman model trained at 640; raise for small/far people, costs speed
+conf: 0.4           # plan: 0.7. CrowdHuman ckpt at 0.4 -> MOT17 recall 57.2 / precision 95.6 (see README)
+iou_keep: 0.5       # plan: keep BPJDet body if IoU with a YOLO person >= 0.5
+batch_size: 8
+half: true

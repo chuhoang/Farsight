@@ -1,0 +1,15 @@
+name: qme
+module: m4_fusion
+source_repo: https://github.com/jiezhu23/QME_ICCV25
+source_commit: see third_party/QME_ICCV25 submodule
+# Route 2A: MoNormQE_dev fusion heads (model_list order matters: adaface, gait, body).
+checkpoints:
+  - file: lsf-ccvid-bs8-seq8-245.92-630.pth
+    gdrive: 1skVpm-T87lhCy_xlsdK4g_PSiPVak0QG
+    sha256: 10898a36c72f2c60867a09d51ca65121744a98c53825aa73bcb00757ece1161a
+    trained_on: CCVID train, model_list [adaface, biggait, cal-ccvid]
+  - file: lsf-mevid-bs8-seq1-52.23-300.pth
+    gdrive: 10Ep_cdGTuJIjr_YzepI4ibwkE7tQihUw
+    sha256: e5e077a9f9ac7f79c150c21f547d93079528e544609d6535d601901cd6762d69
+    trained_on: MEVID train, model_list [adaface, agrl, cal-mevid]
+license: MIT

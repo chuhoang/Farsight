@@ -1,0 +1,9 @@
+# Values from BPJDet demos/ (image.py, video.py) except conf_body (lowered so ByteTrack gets low-score boxes)
+data_yaml: data/JointBP_CrowdHuman_face.yaml   # relative to third_party/BPJDet
+imgsz: 1536
+conf_body: 0.3
+conf_face: 0.5
+iou_thres: 0.5
+match_iou: 0.6     # face must lie inside its body box (inner-IoU)
+batch_size: 8
+half: true

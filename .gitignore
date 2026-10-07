@@ -1,0 +1,46 @@
+# weights / checkpoints
+weights/*
+!weights/.gitkeep
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.engine
+*.so
+
+# data (datasets live in ~/datasets; frames / crops / masks taken from them)
+data/
+datasets/
+*.h5
+*.hdf5
+*.npz
+*.npy
+*.mat
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.mp4
+*.avi
+demo/sample_query/
+demo/out*
+eval/results/gait_masks_*/
+*.jpg
+*.jpeg
+*.png
+
+# logs
+*.log
+*.jsonl
+logs/
+runs/
+wandb/
+nohup.out
+
+# python / tools
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.ipynb_checkpoints/

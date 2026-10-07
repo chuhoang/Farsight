@@ -1,0 +1,21 @@
+[submodule "third_party/BPJDet"]
+	path = third_party/BPJDet
+	url = https://github.com/hnuzhy/BPJDet
+[submodule "third_party/DATUM"]
+	path = third_party/DATUM
+	url = https://github.com/xg416/DATUM
+[submodule "third_party/CVLface"]
+	path = third_party/CVLface
+	url = https://github.com/mk-minchul/CVLface
+[submodule "third_party/OpenGait"]
+	path = third_party/OpenGait
+	url = https://github.com/ShiqiYu/OpenGait
+[submodule "third_party/AIM-CCReID"]
+	path = third_party/AIM-CCReID
+	url = https://github.com/BoomShakaY/AIM-CCReID
+[submodule "third_party/QME_ICCV25"]
+	path = third_party/QME_ICCV25
+	url = https://github.com/jiezhu23/QME_ICCV25
+[submodule "third_party/CSCI"]
+	path = third_party/CSCI
+	url = https://github.com/ppriyank/ICCV-CSCI-Person-ReID

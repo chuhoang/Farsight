@@ -1,0 +1,17 @@
+opengait_config: configs/biggait/BigGait_CCPG.yaml   # model_cfg read from third_party/OpenGait (image_size 224 -> 448x224)
+checkpoint: BigGait__Dinov2_Gaitbase_Frame30-40000.pt
+input_size: [256, 128]     # H, W after resize_with_padding (OpenGait pretreatment_rgb.py)
+clip_len: 30               # Frame30 setting
+min_frames: 15             # shorter track -> gait None
+clip_batch: 2              # clips per forward (2 x 30 frames ~1.5 GB peak; GPU is shared)
+fp16: true                 # OpenGait evaluator enable_float16
+# inter_feat: QME position = DINOv2 x_norm_patchtokens_mid4 (LN'd concat of blocks 2,5,8,11), middle 2 blocks
+# (5, 8) kept like QME model.get_gait_feat, mean over patches + frames + clips -> 768-d
+inter_slice: [384, 1152]
+# gait quality = preprocess.mask_quality (BigGait's own masks: area, stability, occlusion, length, crop height);
+# tracks below min_quality get gait = None. 0 = keep all; calibrated on val (eval.gait_quality_calib).
+min_quality: 0.0
+device: cuda
+# Foreground-channel choice normalised by the valid (non-padded) width (model.get_body_valid). OpenGait's get_body
+# compares against the full width, so on padded crops (w/h < 0.5: 69% of MEVID) it keeps the background as body.
+mask_fix: true

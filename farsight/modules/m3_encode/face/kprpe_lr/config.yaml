@@ -1,0 +1,27 @@
+# KP-RPE ViT-B fine-tuned for long-range faces (train_m3). Inference = kprpe/config.yaml + this checkpoint.
+checkpoint: weights/m3_encode/face/kprpe_lr/r2b_s0.pt   # chosen run (C4, on val); set after training
+
+train:            # train.py (C1-C3); one factor changed per run, see README
+  sources:        # cache (eval.face_cache) / identities (split key) / sampling weight / P(B2 degradation)
+    ccvid:    {cache: ccvid_train,    ids: "splits/ccvid_qme.json:train", weight: 0.3, degrade: 0.5}
+    mevid:    {cache: mevid_train,    ids: "splits/mevid_qme.json:train", weight: 0.3, degrade: 0.0}
+    tinyface: {cache: tinyface_train, weight: 0.4, degrade: 0.0}
+  min_score: 0.5      # DFA face score, as the encoder's min_face_score
+  steps: 16000       # ~30 epochs of the all-source pool (33,930 crops / batch 64 = 530 steps per epoch)
+  batch: 64
+  grad_ckpt: true      # activation checkpointing per block (8 GB GPU)
+  workers: 4
+  lr: 1.0e-5          # backbone: 1/10 of CVLface's 1e-4 (AdamW)
+  head_lr: 1.0e-3
+  wd: 0.05
+  warmup: 500
+  max_grad_norm: 5.0
+  m: 0.4              # AdaFace (CVLface losses/configs/adaface.yaml)
+  h: 0.333
+  t_alpha: 0.01
+  lambda_cons: 1.0    # C2: student(degraded) vs teacher(clean)
+  lambda_kd: 1.0      # anti-forgetting: student(clean) vs teacher(clean)
+  ldmk_noise: 0.0     # C3: landmark jitter (px of 112) on the student input
+  degrade: {}         # overrides of degrade.DEFAULT
+  log_every: 50
+  eval_every: 1000    # ~2 epochs

@@ -1,0 +1,35 @@
+{
+ "subset": {
+  "seed": 0,
+  "ids": 18,
+  "query": 101,
+  "gallery": 527
+ },
+ "author": {
+  "R1": 0.8118811881188119,
+  "R5": 0.8811881188118812,
+  "R10": 0.9207920792079208,
+  "mAP": 0.6534617630929229
+ },
+ "wrapper_all_clips_check": {
+  "n": 40,
+  "cos_min": 0.9999998211860657,
+  "cos_mean": 1.0,
+  "s_per_track": 5.9601234770499785,
+  "frames_per_s": 58.610362913639136,
+  "peak_gpu_gb": 2.0999412536621094,
+  "gpu": "NVIDIA GeForce RTX 5050 Laptop GPU"
+ },
+ "wrapper_8clips": {
+  "R1": 0.801980198019802,
+  "R5": 0.8712871287128713,
+  "R10": 0.9207920792079208,
+  "mAP": 0.6487261229480898,
+  "s_per_track": 0.9347584026035,
+  "frames_per_s": 32.458402349424986,
+  "peak_gpu_gb": 3.2374062538146973,
+  "gpu": "NVIDIA GeForce RTX 5050 Laptop GPU",
+  "cos_to_author_min": 0.48808035254478455,
+  "cos_to_author_mean": 0.99248868227005
+ }
+}

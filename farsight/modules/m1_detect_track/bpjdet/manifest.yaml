@@ -1,0 +1,10 @@
+name: bpjdet
+module: m1_detect_track
+source_repo: https://github.com/hnuzhy/BPJDet
+source_commit: 06821caaeb3daa7fc28867abd32685135ad2cbaf
+checkpoints:
+  - file: ch_face_l_1536_e150_best_mMR.pt
+    hf_repo: HoyerChou/BPJDet
+    sha256: fc1f78774d5dd6dee7531c1bc4d25ad21a806779111e0b31eb471f26cc1b2a38
+    trained_on: CrowdHuman (body-face)
+license: GPL-3.0 (YOLOv5 fork)

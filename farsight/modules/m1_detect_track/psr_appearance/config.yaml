@@ -1,0 +1,9 @@
+input_hw: [256, 128]   # body crop resize (H, W)
+mem_size: 10           # K: FIFO features per ID
+mem_every: 10          # N: add one patch every N frames
+window_s: 10           # T: lost tracks older than this are forgotten
+metric: cosine         # cosine (L2-normed feats) | mse (paper)
+thr: 0.15              # remap a new ID to the closest old ID if distance < thr
+overlap_iou: 0.3       # two boxes with IoU above this are "crossing"
+swap_margin: 0.05      # after a crossing, swap IDs if swapped assignment is closer by this much
+half: true

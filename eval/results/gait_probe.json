@@ -1,0 +1,122 @@
+{
+ "ccvid_val": {
+  "n_query": 150,
+  "n_gallery": 273,
+  "base_clips30": {
+   "GR_R1": 0.9,
+   "rank1_incl_same_cam": 0.9,
+   "cos_genuine": 0.9077208042144775,
+   "cos_impostor": 0.7183696627616882,
+   "cos_to_whole_seq": 0.9964679479598999
+  },
+  "whole_seq": {
+   "GR_R1": 0.9,
+   "rank1_incl_same_cam": 0.9,
+   "cos_genuine": 0.9037758708000183,
+   "cos_impostor": 0.7143770456314087,
+   "cos_to_whole_seq": 1.0
+  },
+  "shuffled": {
+   "GR_R1": 0.9,
+   "rank1_incl_same_cam": 0.9,
+   "cos_genuine": 0.9037758708000183,
+   "cos_impostor": 0.7143770456314087,
+   "cos_to_whole_seq": 1.0
+  },
+  "reversed": {
+   "GR_R1": 0.9,
+   "rank1_incl_same_cam": 0.9,
+   "cos_genuine": 0.9037758708000183,
+   "cos_impostor": 0.7143770456314087,
+   "cos_to_whole_seq": 1.0
+  },
+  "static_frame": {
+   "GR_R1": 0.6466666666666666,
+   "rank1_incl_same_cam": 0.6466666666666666,
+   "cos_genuine": 0.7903494834899902,
+   "cos_impostor": 0.6481325030326843,
+   "cos_to_whole_seq": 0.8762104511260986
+  },
+  "grayscale": {
+   "GR_R1": 0.8666666666666667,
+   "rank1_incl_same_cam": 0.8666666666666667,
+   "cos_genuine": 0.9034909009933472,
+   "cos_impostor": 0.7202590703964233,
+   "cos_to_whole_seq": 0.9515912532806396
+  },
+  "hflip": {
+   "GR_R1": 0.9133333333333333,
+   "rank1_incl_same_cam": 0.9133333333333333,
+   "cos_genuine": 0.9060323238372803,
+   "cos_impostor": 0.7090567350387573,
+   "cos_to_whole_seq": 0.9698927998542786
+  },
+  "lowres_x3": {
+   "GR_R1": 0.8866666666666667,
+   "rank1_incl_same_cam": 0.8866666666666667,
+   "cos_genuine": 0.9062215089797974,
+   "cos_impostor": 0.7305998206138611,
+   "cos_to_whole_seq": 0.9545804858207703
+  }
+ },
+ "mevid_test": {
+  "n_query": 102,
+  "n_gallery": 208,
+  "base_clips30": {
+   "GR_R1": 0.029411764705882353,
+   "rank1_incl_same_cam": 0.16666666666666666,
+   "cos_genuine": 0.7501548528671265,
+   "cos_impostor": 0.7337191700935364,
+   "cos_to_whole_seq": 0.9937352538108826
+  },
+  "whole_seq": {
+   "GR_R1": 0.0392156862745098,
+   "rank1_incl_same_cam": 0.16666666666666666,
+   "cos_genuine": 0.7358025908470154,
+   "cos_impostor": 0.7179428339004517,
+   "cos_to_whole_seq": 1.0
+  },
+  "shuffled": {
+   "GR_R1": 0.0392156862745098,
+   "rank1_incl_same_cam": 0.16666666666666666,
+   "cos_genuine": 0.7358025908470154,
+   "cos_impostor": 0.7179428339004517,
+   "cos_to_whole_seq": 1.0
+  },
+  "reversed": {
+   "GR_R1": 0.0392156862745098,
+   "rank1_incl_same_cam": 0.16666666666666666,
+   "cos_genuine": 0.7358025908470154,
+   "cos_impostor": 0.7179428339004517,
+   "cos_to_whole_seq": 1.0
+  },
+  "static_frame": {
+   "GR_R1": 0.00980392156862745,
+   "rank1_incl_same_cam": 0.0392156862745098,
+   "cos_genuine": 0.6532559990882874,
+   "cos_impostor": 0.6488325595855713,
+   "cos_to_whole_seq": 0.8531704545021057
+  },
+  "grayscale": {
+   "GR_R1": 0.029411764705882353,
+   "rank1_incl_same_cam": 0.12745098039215685,
+   "cos_genuine": 0.7379604578018188,
+   "cos_impostor": 0.7207371592521667,
+   "cos_to_whole_seq": 0.9419242739677429
+  },
+  "hflip": {
+   "GR_R1": 0.029411764705882353,
+   "rank1_incl_same_cam": 0.14705882352941177,
+   "cos_genuine": 0.737867534160614,
+   "cos_impostor": 0.7195605635643005,
+   "cos_to_whole_seq": 0.9457886815071106
+  },
+  "lowres_x3": {
+   "GR_R1": 0.0196078431372549,
+   "rank1_incl_same_cam": 0.08823529411764706,
+   "cos_genuine": 0.7576071619987488,
+   "cos_impostor": 0.7456380128860474,
+   "cos_to_whole_seq": 0.9113796353340149
+  }
+ }
+}

@@ -1,0 +1,7 @@
+# Face Quality Estimator (QME Face_Quality_Estimator). Input = face inter_feat "style" vector:
+# for ViT blocks [8, 16]: LayerNorm(no affine) tokens -> [mean, std] over patches -> (blk, stat, C) flattened = 4*C,
+# averaged over the track's frames (see model.style_from_blocks). Route 2A ckpt expects AdaFace ViT-B, C=512.
+patch_dim: 512
+blocks: [8, 16]          # encoder blocks M3 face must hook (documentation for the face encoder)
+checkpoint: fgb_mod_qe-adaface_t1r20-mevid-6000.pth   # file from manifest.yaml or a path; null = untrained (2B: train.py)
+device: cpu

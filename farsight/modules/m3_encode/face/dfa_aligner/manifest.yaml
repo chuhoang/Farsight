@@ -1,0 +1,13 @@
+name: dfa_aligner
+module: m3_encode/face
+source_repo: https://github.com/mk-minchul/CVLface
+source_commit: 308142aa50adf2e187711354f7524635d3414f1e
+checkpoints:
+  - file: pretrained_model/model.pt
+    hf_repo: minchul/cvlface_DFA_mobilenet
+    hf_file: pretrained_model/model.pt
+    sha256: 2679892884af957c8e918d7b9261da11d79e4799660c7d7c86a0396932fdc254
+    trained_on: WebFace4M-based DFA training (KP-RPE paper, CVPR 2024)
+    note: plain state_dict for CVLface DifferentiableFaceAligner (mobilenet0.25)
+license: "MIT (CVLface code); follow training-data license"
+downloaded: 2026-10-04

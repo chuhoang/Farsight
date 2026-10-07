@@ -1,0 +1,9 @@
+checkpoint: ltcc-checkpoint.pth.tar   # file from manifest.yaml; LTCC beats PRCC on CCVID (README Results)
+input_size: [384, 192]                # H, W (AIM configs/default_img.py)
+feat_dim: 4096                        # maxavg pooling: [max 2048 | avg 2048] -> BN
+half_dim: false                       # true = keep only avg-pool half (2048-d), plan M3c step 3
+hook_layer: layer3                    # inter_feat = layer3 output + GAP -> 1024-d (QME's AIM wrapper has no hook)
+flip: false                           # AIM test.py sums flipped features; QME does not. Doubles cost.
+batch_size: 32
+max_frames: 32                        # uniform sampling per track
+device: cuda

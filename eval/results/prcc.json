@@ -1,0 +1,43 @@
+{
+ "checkpoint": "prcc-checkpoint.pth.tar",
+ "n": {
+  "A": 3384,
+  "B": 3873,
+  "C": 3543
+ },
+ "published_repo": {
+  "SC": [
+   100.0,
+   99.8
+  ],
+  "CC": [
+   58.2,
+   58.0
+  ]
+ },
+ "extract_seconds": 620.3,
+ "flip=False": {
+  "SC": {
+   "rank1": 99.97,
+   "rank5": 100.0,
+   "mAP": 99.72
+  },
+  "CC": {
+   "rank1": 58.2,
+   "rank5": 61.42,
+   "mAP": 57.54
+  }
+ },
+ "flip=True": {
+  "SC": {
+   "rank1": 99.97,
+   "rank5": 100.0,
+   "mAP": 99.76
+  },
+  "CC": {
+   "rank1": 58.09,
+   "rank5": 61.08,
+   "mAP": 57.85
+  }
+ }
+}

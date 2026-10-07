@@ -1,0 +1,14 @@
+name: kprpe
+module: m3_encode/face
+source_repo: https://github.com/mk-minchul/CVLface
+source_commit: 308142aa50adf2e187711354f7524635d3414f1e
+checkpoints:
+  - file: pretrained_model/model.pt
+    hf_repo: minchul/cvlface_adaface_vit_base_kprpe_webface12m
+    hf_file: pretrained_model/model.pt
+    sha256: 04b4bee1de7cefa9e97900f8449fca906d8afbab2029bd39cc5049d33e927ed9
+    trained_on: WebFace12M (AdaFace loss)
+    note: plain state_dict for CVLface ViTKPRPEModel 'base'; HF model.safetensors is the same weights (not needed)
+license: "MIT (CVLface code); follow WebFace260M license for weights"
+downloaded: 2026-10-04
+output_dim: 512

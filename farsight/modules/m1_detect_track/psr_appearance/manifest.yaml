@@ -1,0 +1,11 @@
+name: psr_appearance
+module: m1_detect_track
+source_repo: https://github.com/pytorch/vision
+source_commit: pip torchvision==0.26.0
+checkpoints:
+  - file: resnet18-f37072fd.pth
+    url: https://download.pytorch.org/models/resnet18-f37072fd.pth
+    sha256: f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec
+    trained_on: ImageNet-1k (torchvision IMAGENET1K_V1)
+license: BSD-3-Clause
+output_dim: 512

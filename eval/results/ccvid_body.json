@@ -1,0 +1,52 @@
+{
+ "frames_per_tracklet": 8,
+ "n_query": 834,
+ "n_gallery": 1074,
+ "n_images": 15264,
+ "seconds": 650.4,
+ "forward_passes_per_image": 4,
+ "ltcc-checkpoint.pth.tar": {
+  "clean": {
+   "general": {
+    "rank1": 78.78,
+    "mAP": 72.99
+   },
+   "CC": {
+    "rank1": 78.06,
+    "mAP": 71.02
+   }
+  },
+  "face_blur": {
+   "general": {
+    "rank1": 74.7,
+    "mAP": 67.64
+   },
+   "CC": {
+    "rank1": 73.86,
+    "mAP": 65.04
+   }
+  }
+ },
+ "prcc-checkpoint.pth.tar": {
+  "clean": {
+   "general": {
+    "rank1": 78.18,
+    "mAP": 53.93
+   },
+   "CC": {
+    "rank1": 74.82,
+    "mAP": 49.04
+   }
+  },
+  "face_blur": {
+   "general": {
+    "rank1": 75.9,
+    "mAP": 54.27
+   },
+   "CC": {
+    "rank1": 72.06,
+    "mAP": 49.97
+   }
+  }
+ }
+}

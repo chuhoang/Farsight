@@ -1,0 +1,41 @@
+{
+ "ccvid_test": {
+  "n_query": 417,
+  "dropped_no_positive": 0,
+  "face_R1": 93.29,
+  "body_R1": 80.1,
+  "oracle_R1": 95.44,
+  "face_fixes_body": 15.35,
+  "body_fixes_face": 2.16,
+  "face_fixes_body_of_body_misses": 77.11,
+  "body_fixes_face_of_face_misses": 32.14,
+  "genuine_score_corr": 0.582,
+  "n_genuine_pairs": 2532
+ },
+ "ccvid_test_degraded": {
+  "n_query": 417,
+  "dropped_no_positive": 0,
+  "face_R1": 14.87,
+  "body_R1": 44.36,
+  "oracle_R1": 48.68,
+  "face_fixes_body": 4.32,
+  "body_fixes_face": 33.81,
+  "face_fixes_body_of_body_misses": 7.76,
+  "body_fixes_face_of_face_misses": 39.72,
+  "genuine_score_corr": 0.38,
+  "n_genuine_pairs": 1658
+ },
+ "mevid_test": {
+  "n_query": 316,
+  "dropped_no_positive": 0,
+  "face_R1": 29.11,
+  "body_R1": 20.25,
+  "oracle_R1": 40.82,
+  "face_fixes_body": 20.57,
+  "body_fixes_face": 11.71,
+  "face_fixes_body_of_body_misses": 25.79,
+  "body_fixes_face_of_face_misses": 16.52,
+  "genuine_score_corr": 0.496,
+  "n_genuine_pairs": 3134
+ }
+}

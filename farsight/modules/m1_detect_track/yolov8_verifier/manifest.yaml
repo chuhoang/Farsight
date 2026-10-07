@@ -1,0 +1,15 @@
+name: yolov8_verifier
+module: m1_detect_track
+source_repo: https://github.com/ultralytics/ultralytics
+source_commit: pip ultralytics==8.4.173
+checkpoints:
+  - file: crowdhuman_yolov8n_best.pt
+    hf_repo: raghavendra24/crowdhuman-yolov8n
+    sha256: 7eb5c377a0ff211a5e3890ae09f21c8335e2746ca2fa67c536f78ab66c8ce730
+    trained_on: CrowdHuman (Roboflow export, 1 class "person", 50 epochs, imgsz 640)
+    note: community checkpoint, no license/model card; pickle globals scanned (tools/_scan_pickle.py) - clean
+  - file: yolov8x.pt
+    hf_repo: Ultralytics/YOLOv8
+    sha256: c4d5a3f000d771762f03fc8b57ebd0aae324aeaefdd6e68492a9c4470f2d1e8b
+    trained_on: COCO (class 0 = person used)
+license: AGPL-3.0 (ultralytics); CrowdHuman checkpoint unlicensed

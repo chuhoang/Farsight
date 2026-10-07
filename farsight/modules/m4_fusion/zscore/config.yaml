@@ -1,0 +1,5 @@
+# Fusion v1: s = sum_m w_m q_m z_m / sum_m w_m q_m over available modalities (plan M4 v1)
+weights: {face: 1.0, gait: 1.0, body: 1.0}   # overwritten by grid_search() + save()
+use_quality: true        # multiply by probe ModalityOut.quality
+top_k: 100               # length of SearchResult.ranked (null = whole gallery)
+stats: m4_fusion/zscore/stats.json   # under weights/; written by fit()/set_tau()/save(); identity stats if absent

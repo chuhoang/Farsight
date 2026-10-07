@@ -1,0 +1,39 @@
+{
+ "train": {
+  "tracklets": 6338,
+  "problems": {},
+  "blank_frame_frac": 0.0005305321237200913,
+  "tracklets_with_blank_sample": 9,
+  "examples_blank": [
+   "mevidtrain_01061",
+   "mevidtrain_01122",
+   "mevidtrain_01619",
+   "mevidtrain_01623",
+   "mevidtrain_01643"
+  ]
+ },
+ "query": {
+  "tracklets": 316,
+  "problems": {},
+  "blank_frame_frac": 0.005274261603375527,
+  "tracklets_with_blank_sample": 2,
+  "examples_blank": [
+   "mevidtest_00000",
+   "mevidtest_00001"
+  ]
+ },
+ "gallery": {
+  "tracklets": 1438,
+  "problems": {},
+  "blank_frame_frac": 0.0011625203441060219,
+  "tracklets_with_blank_sample": 4,
+  "examples_blank": [
+   "mevidtest_00060",
+   "mevidtest_00159",
+   "mevidtest_00897",
+   "mevidtest_01379"
+  ]
+ },
+ "query_gallery_overlap": 0,
+ "query_ids_missing_in_gallery": 0
+}

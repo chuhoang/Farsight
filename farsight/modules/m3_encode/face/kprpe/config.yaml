@@ -1,0 +1,37 @@
+# KP-RPE ViT-Base (AdaFace loss, WebFace12M) from CVLface; no training.
+# name..yaml_path mirror the checkpoint's pretrained_model/model.yaml (HF minchul/cvlface_adaface_vit_base_kprpe_webface12m).
+name: base               # depth 24, dim 512, 16 heads, patch 8 -> 196 tokens, no CLS token
+input_size: [3, 112, 112]
+color_space: RGB
+output_dim: 512
+start_from: ''
+freeze: true
+mask_ratio: 0.0
+rpe_config:
+  name: KPRPE_shared
+  rpe_on: k
+  shared_head: true
+  mode: ctx
+  method: product
+  ratio: 1.9
+  ctx_type: rel_keypoint_splithead_unshared
+  num_keypoints: 5
+yaml_path: models/vit_kprpe/configs/v1_base_kprpe_splithead_unshared.yaml
+
+aligner: dfa_aligner     # registry name of the aligner run before the encoder
+batch_size: 32
+fp16: false              # autocast; ~2x faster, features differ slightly from fp32
+
+# inter_feat (QE input, fusion v2). Output of net.blocks[i] (0-based, of 24), captured in the same forward.
+# Default = QME_ICCV25 model.py build_face_backbone (KP-RPE/AdaFace ViT): blocks [8, 16], tokens LayerNorm'd
+# (no affine), then per block mean+std over the 196 patch tokens (= QME FaceQE.make_style) -> 2*2*512 = 2048-d.
+# Candidates: [8,16] style (QME-compatible, default) | [16] style (1024-d) | [8,16] mean (1024-d) | [20] mean.
+inter_blocks: [8, 16]
+inter_pool: style        # style (mean+std of patch tokens) | mean (patch mean). No CLS token in this ViT.
+
+# Template aggregation (plan M3a): drop frames with norm < min_quality, softmax(norm / softmax_temp) weights.
+# ponytail: min_quality placeholder; measured norms: real faces 14-24, but random noise ~21-24 and heavy blur ~27,
+# so norm does NOT reject junk on this ViT -> min_face_score does. Tune both on degraded CCVID/MEVID crops.
+min_quality: 5.0
+min_face_score: 0.5     # DFA face confidence; noise crops score 0.1-0.4, real faces > 0.99
+softmax_temp: 1.0

@@ -1,0 +1,5 @@
+# Final: KP-RPE + BigGait + AIM, QE retrained on KP-RPE inter_feat, QME trained on CCVID/MEVID train splits
+m1_detect_track: {detector: bpjdet, verifier: yolov8_verifier, tracker: bytetrack, appearance: psr_appearance}
+m2_restore:      {enabled: true, gate: quality_gate, restorer: datum}
+m3_encode:       {face: [dfa_aligner, kprpe], gait: biggait, body: aim}
+m4_fusion:       {method: qme, qe_checkpoint: kprpe_2B}

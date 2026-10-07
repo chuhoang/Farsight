@@ -1,0 +1,12 @@
+checkpoint: csci_v_mevid.pth          # chosen by the user (plan D1b); csci_v_ccvid.pth stays listed in the manifest, not downloaded
+image_checkpoint: csci_img_mevid.pth  # image model (csci_image, and csci_video tracks shorter than min_video_frames)
+input_size: [224, 224]                # H, W; PIL bicubic stretch (ST.Scale interpolation=3), ImageNet normalize
+seq_len: 8                            # author's test clips: 8 frames, stride 4 (CAL recombination), clip[::2] -> T=4
+stride: 4
+max_clips: 8                          # per track, spread evenly (plan B3); 0 = all clips
+min_video_frames: 4                   # shorter tracks -> image model
+image_max_frames: 32                  # csci_image: uniform frames per track
+hook_block: 16                        # inter_feat = mean patch token of blocks[16] (plan B5)
+batch_size: 8                         # clips (video) / 4x this for images
+fp16: true                            # author evaluates under autocast fp16
+device: cuda

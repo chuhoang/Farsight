@@ -1,0 +1,9 @@
+# DATUM dynamic-scene model (args = defaults of third_party/DATUM/code/test_DATUM_dynamic.py)
+n_features: 16
+n_blocks: 15
+past_frames: 2
+future_frames: 2
+activation: gelu
+size: 256        # crops resized to size x size; >= 256 (SPyNet runs at size/4 with a 5-level pyramid)
+clip: 16         # frames per sliding window (plan: 10-20)
+margin: 2        # frames dropped at inner window edges (overwritten by the next window)

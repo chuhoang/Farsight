@@ -1,0 +1,57 @@
+{
+ "mevid": {
+  "n_probe": 316,
+  "n_valid": 316,
+  "face_probes": 172,
+  "R1_CAL": {
+   "face": 29.1,
+   "gait": 6.0,
+   "body": 79.4,
+   "QME": 76.6
+  },
+  "face_probes_only": {
+   "face": 53.5,
+   "gait": 6.4,
+   "body": 82.6,
+   "QME": 78.5
+  },
+  "noface_probes_only": {
+   "gait": 5.6,
+   "body": 75.7,
+   "QME": 75.0
+  },
+  "QME_vs_body": {
+   "lost (body right, QME wrong)": 13,
+   "won (body wrong, QME right)": 5
+  },
+  "lost_cases": {
+   "with face": 12,
+   "face wrong": 12,
+   "face right": 0,
+   "no face": 1,
+   "gait wrong": 12,
+   "mean W (face lost cases)": 0.679
+  },
+  "won_cases": {
+   "with face": 5,
+   "face right": 4,
+   "gait right": 0
+  },
+  "QE": {
+   "W_mean_face_right": 0.66,
+   "W_mean_face_wrong": 0.442,
+   "AUC_W_vs_face_right": 0.699,
+   "face_wrong_with_W>0.5_%": 43.8,
+   "face_right_with_W<0.5_%": 28.3
+  },
+  "oracle_GR_R1": {
+   "W oracle": 80.7,
+   "face gate oracle": 80.4,
+   "W = 0": 78.9,
+   "W = 1": 71.2,
+   "no face": 79.0,
+   "no gait": 76.9,
+   "body only": 79.4
+  }
+ }
+}

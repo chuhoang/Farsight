@@ -1,0 +1,14 @@
+name: biggait
+module: m3_encode/gait
+source_repo: https://github.com/ShiqiYu/OpenGait
+source_commit: 240e8cf18ae7a06f4ecd630c4e164e98ff17ae23
+checkpoints:
+  - file: BigGait__Dinov2_Gaitbase_Frame30-40000.pt
+    hf_repo: opengait/OpenGait
+    hf_file: CCPG/BigGait__Dinov2_Gaitbase/BigGait__Dinov2_Gaitbase_Frame30/checkpoints/BigGait__Dinov2_Gaitbase_Frame30-40000.pt
+    sha256: cc7f9980cb2c8ecffcdc39976a6953ecda7e2020166288ea686c2ce22bb679f9
+    downloaded: 2026-10-04
+    trained_on: CCPG
+    note: full state dict incl. DINOv2 ViT-S/14 backbone (no separate dinov2_vits14_pretrain.pth needed)
+license: "OpenGait: see repo LICENSE"
+output_dim: 4096

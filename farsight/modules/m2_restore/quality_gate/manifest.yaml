@@ -1,0 +1,5 @@
+name: quality_gate
+module: m2_restore
+source_repo: none (pure logic)
+checkpoints: []
+license: n/a

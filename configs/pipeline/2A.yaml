@@ -1,0 +1,5 @@
+# QME repo route: QME's own encoders/checkpoints (AdaFace + BigGait + AIM), fusion = QME with its QE checkpoint
+m1_detect_track: {detector: bpjdet, verifier: yolov8_verifier, tracker: bytetrack, appearance: psr_appearance}
+m2_restore:      {enabled: false}
+m3_encode:       {face: [dfa_aligner, kprpe], gait: biggait, body: aim}
+m4_fusion:       {method: qme, qe_checkpoint: qme_repo}

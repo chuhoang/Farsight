@@ -1,0 +1,13 @@
+# DFA (differentiable face aligner, RetinaFace-mobilenet0.25 landmark head) from CVLface.
+# arch..yaml_path mirror the checkpoint's pretrained_model/model.yaml (HF minchul/cvlface_DFA_mobilenet).
+name: differentiable_face_aligner
+arch: mobile0.25
+start_from: ''
+freeze: true
+input_padding_ratio: 0
+input_padding_val: zero
+input_size: 160       # crops are square-padded + resized to this
+output_size: 112      # aligned face size expected by KP-RPE
+color_space: RGB
+yaml_path: aligners/configs/dfa.yaml
+batch_size: 32

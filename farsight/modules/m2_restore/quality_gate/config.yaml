@@ -1,0 +1,3 @@
+# Restore a track iff median per-crop face quality (KP-RPE feature norm) < q0.
+# ponytail: placeholder q0; tune on degraded CCVID/MEVID face crops (plan M2, tools/degrade_dataset.py).
+q0: 20.0

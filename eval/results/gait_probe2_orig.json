@@ -1,0 +1,46 @@
+{
+ "ccvid_val": {
+  "mask_area_mean": 0.4982524514198303,
+  "mask_touches_side_border_frac": 0.47422184865561307,
+  "whole_seq": {
+   "GR_R1": 0.9,
+   "rank1_incl_same_cam": 0.9,
+   "cos_genuine": 0.9037758708000183,
+   "cos_impostor": 0.7143770456314087
+  },
+  "no_appearance": {
+   "GR_R1": 0.9,
+   "rank1_incl_same_cam": 0.9,
+   "cos_genuine": 0.8977593779563904,
+   "cos_impostor": 0.7147906422615051
+  },
+  "no_denoising": {
+   "GR_R1": 0.88,
+   "rank1_incl_same_cam": 0.88,
+   "cos_genuine": 0.8905630707740784,
+   "cos_impostor": 0.6666715741157532
+  }
+ },
+ "mevid_test": {
+  "mask_area_mean": 0.34528350830078125,
+  "mask_touches_side_border_frac": 0.26464034995313557,
+  "whole_seq": {
+   "GR_R1": 0.0392156862745098,
+   "rank1_incl_same_cam": 0.16666666666666666,
+   "cos_genuine": 0.7358025908470154,
+   "cos_impostor": 0.7179428339004517
+  },
+  "no_appearance": {
+   "GR_R1": 0.00980392156862745,
+   "rank1_incl_same_cam": 0.10784313725490197,
+   "cos_genuine": 0.7044616937637329,
+   "cos_impostor": 0.688744843006134
+  },
+  "no_denoising": {
+   "GR_R1": 0.029411764705882353,
+   "rank1_incl_same_cam": 0.1568627450980392,
+   "cos_genuine": 0.7374834418296814,
+   "cos_impostor": 0.7113436460494995
+  }
+ }
+}

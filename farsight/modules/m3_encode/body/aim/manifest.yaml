@@ -1,0 +1,18 @@
+name: aim
+module: m3_encode/body
+source_repo: https://github.com/BoomShakaY/AIM-CCReID
+source_commit: c3bda2b54a3c5d81eb65ea838ae3502aecd61b67
+checkpoints:
+  - file: ltcc-checkpoint.pth.tar
+    gdrive: 10mcVdTl04vzHKj070WylSVO1gWKCC-Kz   # QME repo Drive checkpoints/AIM/ (byte-identical to AIM repo ltcc.pth.tar, id 1YhFuoEOpnwS2seMxFZzzNt5NySkKBJxk)
+    sha256: 490d23a68d535f9a7c1bd0abc3424042069a2d6ad9a4f728fab0cfcb59e19924
+    trained_on: LTCC
+    note: only model_state_dict (identity branch) is stored/used
+    downloaded: 2026-10-04
+  - file: prcc-checkpoint.pth.tar
+    gdrive: 1ivlXlv1scvne0o51YEuoitkGwnlzA73S   # QME repo Drive checkpoints/AIM/
+    sha256: 797c1f5982d55c2412eea0b245295911e0eec90a92b6cddc418ce99915d68b96
+    trained_on: PRCC
+    downloaded: 2026-10-04
+license: "no LICENSE file in source repo"
+output_dim: 4096

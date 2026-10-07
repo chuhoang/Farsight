@@ -1,0 +1,5 @@
+name: zscore
+module: m4_fusion
+source_repo: none (own code)
+checkpoints: []  # no weights; impostor stats are fitted on validation -> weights/m4_fusion/zscore/stats.json
+license: n/a

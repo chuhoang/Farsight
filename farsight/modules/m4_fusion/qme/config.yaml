@@ -1,0 +1,11 @@
+# QME MoE score fusion. 2B (default): checkpoint trained by train.py (use_mask: true).
+# 2A: checkpoint: lsf-ccvid-bs8-seq8-245.92-630.pth (or lsf-mevid-...), use_mask: false.
+checkpoint: null          # manifest file name or path; null = untrained head
+n_experts: 2              # QME default (train_cfg num_experts)
+mlp_ratio: 3
+use_mask: true            # missing flags as extra expert input (plan 2B.2); false for QME released ckpts
+patch_dim: 512            # face QE input = 4*patch_dim style vector
+default_face_weight: 0.5  # probe has a face but neither qe_weight nor usable inter_feat
+tau: null                 # open-set threshold; null = value stored in checkpoint (else -inf)
+top_k: 100
+device: cpu

@@ -1,0 +1,36 @@
+name: csci
+module: m3_encode/body
+source_repo: https://github.com/ppriyank/ICCV-CSCI-Person-ReID
+source_commit: eb793edf9059deae4dbcf6b51c524c1e9726fc6e
+hf_revision: 706e8864037463c90718a13a349c2c9c7c5b058b
+checkpoints:
+  - file: csci_v_mevid.pth
+    hf_repo: ppriyank/CSCI-CC-ReID
+    hf_file: mevid-17-1244/ez_eva02_vid_hybrid_extra_best.pth
+    sha256: 64557fdaa411e164170327ac728a87f253a5feb141612eacd4f4975189c5922f
+    model: ez_eva02_vid_hybrid_extra (EZ-CLIP video, T=4), colour profile 17
+    trained_on: MEVID train
+    reported: MEVID overall R1 79.7 / mAP 56.7 (Script/test.sh)
+  - file: csci_v_ccvid.pth
+    hf_repo: ppriyank/CSCI-CC-ReID
+    hf_file: ccvid-49-1245/ez_eva02_vid_hybrid_extra_best.pth
+    sha256: b2a2a7b79dd7ba9c916b8ee115536802b10219c7b6f587dda0fecf1e5d75a018
+    model: ez_eva02_vid_hybrid_extra (EZ-CLIP video, T=4), colour profile 49
+    trained_on: CCVID train
+    reported: CCVID CC R1 91.0 / mAP 90.9
+  - file: csci_img_ccvid.pth
+    hf_repo: ppriyank/CSCI-CC-ReID
+    hf_file: CCVID_IMG/eva02_l_cloth_best.pth
+    sha256: 636e462cc13044596e0c81a1e9c8f5e33d5653ae21ef06901dcc282b0550f294
+    model: eva02_l_cloth (image, no colours)
+    trained_on: CCVID train (random frames)
+    reported: CCVID general R1 88.6 / mAP 88.4
+  - file: csci_img_mevid.pth
+    hf_repo: ppriyank/CSCI-CC-ReID
+    hf_file: MEVID_IMG/eva02_l_cloth_best.pth
+    sha256: 353b8942053006ce2232378bc8939bfd5f5a215bf753dbd166c8afed8347a61d
+    model: eva02_l_cloth (image, no colours)
+    trained_on: MEVID train (random frames)
+    note: HF MEVID_IMG may differ from MEVID_IMG2 used in the author's test.sh (R1 74.4 / mAP 49.9 there)
+license: "Apache-2.0 (third_party/CSCI/LICENSE); checkpoints trained on CCVID/MEVID: research use only"
+output_dim: 1024

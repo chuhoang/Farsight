@@ -1,0 +1,28 @@
+{
+ "ccvid_test": {
+  "n_query": 834,
+  "dropped_no_positive": 0,
+  "face_R1": 95.08,
+  "body_R1": 54.68,
+  "oracle_R1": 97.0,
+  "face_fixes_body": 42.33,
+  "body_fixes_face": 1.92,
+  "face_fixes_body_of_body_misses": 93.39,
+  "body_fixes_face_of_face_misses": 39.02,
+  "genuine_score_corr": 0.308,
+  "n_genuine_pairs": 4875
+ },
+ "mevid_test": {
+  "n_query": 316,
+  "dropped_no_positive": 0,
+  "face_R1": 29.11,
+  "body_R1": 79.43,
+  "oracle_R1": 83.54,
+  "face_fixes_body": 4.11,
+  "body_fixes_face": 54.43,
+  "face_fixes_body_of_body_misses": 20.0,
+  "body_fixes_face_of_face_misses": 76.79,
+  "genuine_score_corr": 0.444,
+  "n_genuine_pairs": 3134
+ }
+}

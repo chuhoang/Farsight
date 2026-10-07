@@ -1,0 +1,11 @@
+name: datum
+module: m2_restore
+source_repo: https://github.com/xg416/DATUM
+source_commit: see third_party/DATUM submodule
+checkpoints:
+  - file: DATUM_dynamic.pth
+    gdrive: 1IClAWZ-9kY5TggmuQGp11_dqOgCOCbjx
+    sha256: 0ccdda781e635e41013315c6dc5c030d77cd21f6e1deb7383e14341fc63fb1c8
+    trained_on: ATSyn-dynamic
+    note: "\"Pretrained dynamic scene model\" link in DATUM README; state_dict keys prefixed model."
+license: "see third_party/DATUM"

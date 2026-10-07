@@ -1,0 +1,16 @@
+name: qe
+module: m4_fusion
+source_repo: https://github.com/jiezhu23/QME_ICCV25
+source_commit: see third_party/QME_ICCV25 submodule
+# Route 2A: QME's Face_Quality_Estimator trained on AdaFace ViT-B blocks [8,16] (LTCC/MEVID).
+# Google Drive folder: https://drive.google.com/drive/folders/1TBt4HrJlm-Y-IO5SA7IAamZlWvj1vHQU (checkpoints/QME/)
+checkpoints:
+  - file: fgb_mod_qe-adaface_t1r20-mevid-6000.pth
+    gdrive: 1FYqdETtCdbWjDkn0QcaeY3EqG4LtdGLl
+    sha256: d48d47b3cadcc58af05b57dade2ec819b3cf41f73fce35d0a1add8f77cb22bb9
+    trained_on: MEVID train (AdaFace inter_feat, rank_threshold 20)
+  - file: fgb_mod_qe-adaface_t1r3-ltcc-6000.pth
+    gdrive: 1dqX1GWHarZhJRHDW7tYI8ngkS2eAM8yh
+    sha256: 253b6d2572b909753cfe19485a32063789ea6a2c20284339576c683467815c8e
+    trained_on: LTCC train (AdaFace inter_feat, rank_threshold 3)
+license: MIT
